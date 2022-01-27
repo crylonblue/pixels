@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pixels</title>
+</head>
+<style>
+	html, body, * {
+		margin:0;
+		padding:0;
+		background-color:#000;
+		overflow:hidden;
+		height:100%;
+		width:100%;
+	}
+
+	#canvas {
+		margin:0;
+		padding:0;
+		background-color:#000;
+		width:100%;
+		height:100%;
+	}
+
+	.playButton {
+		width: 0;
+		height: 0;
+		border-top: 30px solid transparent;
+		border-left: 60px solid white;
+		border-right: 0px solid transparent;
+		border-bottom: 30px solid transparent;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-15px) translateX(-30px);
+		left: 50%;
+		cursor: pointer;
+	}
+
+	.playButton.playing {
+		display: none;
+	}
+</style>
+<body>
+	<canvas id="canvas">
+	</canvas>
+	<div class="playButton"></div>
+	<script type="text/javascript" src="pixels.js"></script>
+</body>
+</html>
