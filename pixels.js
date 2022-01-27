@@ -1,7 +1,7 @@
 class Universe {
     loadAssets(callback) {
         this.audioContext = new AudioContext()
-        this.audioElement = new Audio("cradles.mp3")
+        this.audioElement = new Audio("Cradles.mp3")
         this.audioElement.onloadeddata = () => {
             this.analyser = this.audioContext.createAnalyser()
             this.audioSource = this.audioContext.createMediaElementSource(this.audioElement)
