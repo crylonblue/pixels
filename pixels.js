@@ -1,7 +1,7 @@
 class Universe {
     loadAssets(callback) {
         this.audioContext = new AudioContext()
-        this.audioElement = new Audio("Cradles.mp3")
+        this.audioElement = new Audio("Infinity.mp3")
         this.audioElement.onloadeddata = () => {
             this.analyser = this.audioContext.createAnalyser()
             this.audioSource = this.audioContext.createMediaElementSource(this.audioElement)
@@ -139,7 +139,7 @@ class Universe {
 
 
             if (diff[i] > 0) {
-                p.radius += (this.freqData[i] * diff[i]) / 1000
+                p.radius += (this.freqData[i] * Math.pow(diff[i], 2)) / 10000
             }
 
             if (p.radius < 1) {
@@ -228,7 +228,7 @@ class Universe {
         }
 
         window.onclick = () => {
-            this.flash()
+            this.transition()
         }
 
         for (let i = 0; i < maxPixels; i++) {
